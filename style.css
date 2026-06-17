@@ -1,0 +1,261 @@
+/* ================= 1. DESKTOP WITH PREMIUM ANIMATED BACKGROUND ================= */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    /* Ultra premium cyber red & dark shadow gradient layout */
+    background: linear-gradient(-45deg, #050000, #2b0206, #111111, #5c050f, #000000) !important;
+    background-size: 400% 400% !important;
+    animation: gradientMovement 12s ease infinite !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    overflow: hidden !important;
+    user-select: none !important;
+    position: relative;
+}
+
+@keyframes gradientMovement {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================= 2. BIG WATERMARK BACKGROUND TEXT ================= */
+.big-os-title {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9vw;
+    font-weight: 900;
+    color: rgba(211, 16, 39, 0.04);
+    letter-spacing: 5px;
+    z-index: 1;
+    pointer-events: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+/* ================= 3. TOP OS BAR & TIME OVERLAYS ================= */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.6);
+    box-sizing: border-box;
+    color: #ffffff !important;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.time-date-container {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#horloge {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+#systemDate {
+    font-size: 11px;
+    color: #b3b3b3;
+    margin-top: 1px;
+}
+
+/* ================= 4. ANALOG CLOCK (HORLOGE MDAWRA) ================= */
+.analog-clock {
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    width: 90px;
+    height: 90px;
+    border: 3px solid rgba(211, 16, 39, 0.6);
+    border-radius: 50%;
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    background: #ffffff;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    border-radius: 4px;
+}
+
+.hour-hand { height: 3px; width: 30%; left: 20%; background: #ffffff; }
+.min-hand { height: 2px; width: 40%; left: 10%; background: #cccccc; }
+.second-hand { height: 1px; width: 45%; left: 5%; background: #d31027; }
+.center-nut {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #d31027;
+    border-radius: 50%;
+}
+
+/* ================= 5. DESKTOP APPS & SHORTCUTS ================= */
+#desktopApps {
+    position: absolute;
+    top: 64px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+
+.app-icon {
+    text-align: center;
+    padding: 10px;
+    width: 85px;
+    cursor: pointer;
+    border-radius: 14px;
+    transition: background 0.2s;
+}
+
+.icon-svg {
+    width: 58px;
+    height: 58px;
+    padding: 12px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.red-icon { background: linear-gradient(135deg, #d31027, #ea1e63) !important; fill: #ffffff !important; }
+.black-icon { background: linear-gradient(135deg, #1f1f1f, #383838) !important; fill: #ffffff !important; border: 1px solid #d31027 !important; }
+
+.app-icon p {
+    margin: 8px 0 0 0;
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.9);
+}
+
+.app-icon.selected {
+    background-color: rgba(211, 16, 39, 0.3) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+/* ================= 6. WINDOW ARCHITECTURE ================= */
+.window {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: none;
+    width: 430px;
+    z-index: 10;
+}
+
+.windowheader {
+    background-color: #111111 !important;
+    padding: 12px 16px;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d31027;
+}
+
+.windowheader:active { cursor: grabbing; }
+.headertext { font-weight: bold; color: #ffffff !important; font-size: 13px; letter-spacing: 0.5px; }
+
+.closebutton {
+    background-color: #d31027 !important;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+.closebutton:hover { background-color: #ff1e39 !important; }
+.window-content { padding: 22px; color: #222222 !important; font-size: 14px; }
+
+textarea {
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    box-sizing: border-box;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+}
+
+.save-btn {
+    background-color: #d31027 !important;
+    color: white !important;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.contact-card {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #d31027;
+    text-align: left;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.project-item {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 10px 14px;
+    border-radius: 10px;
+    border-left: 3px solid #111;
+}
+
+.project-item h5 { margin: 0 0 4px 0; color: #d31027; font-size: 14px; }
+.project-item p { margin: 0; font-size: 12px; color: #444; line-height: 1.4; }

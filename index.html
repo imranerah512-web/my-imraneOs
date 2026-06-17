@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImraneOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+    <div class="top-bar">
+        <div class="os-name">ImraneOS v1.0 🔴⚪</div>
+        <div class="time-date-container">
+            <div id="horloge">00:00:00</div>
+            <div id="systemDate">00/00/0000</div>
+        </div>
+    </div>
+
+    <!-- ================= BIG BACKGROUND TEXT ================= -->
+    <div class="big-os-title">ImraneOS</div>
+
+    <!-- ================= ANALOG CLOCK (L-MDAWRA) ================= -->
+    <div class="analog-clock">
+        <div class="clock-face">
+            <div class="hand hour-hand" id="hourHand"></div>
+            <div class="hand min-hand" id="minHand"></div>
+            <div class="hand second-hand" id="secondHand"></div>
+            <div class="center-nut"></div>
+        </div>
+    </div>
+
+    <!-- ================= DESKTOP SHORTCUTS ================= -->
+    <div id="desktopApps">
+        
+        <!-- App 1: Welcome -->
+        <div class="app-icon" id="welcomeIcon">
+            <svg viewBox="0 0 24 24" class="icon-svg red-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <p>Welcome</p>
+        </div>
+
+        <!-- App 2: Projects -->
+        <div class="app-icon" id="projectsIcon">
+            <svg viewBox="0 0 24 24" class="icon-svg black-icon"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+            <p>Projects</p>
+        </div>
+
+        <!-- App 3: Notes -->
+        <div class="app-icon" id="notesIcon">
+            <svg viewBox="0 0 24 24" class="icon-svg black-icon"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <p>DevNotes</p>
+        </div>
+
+        <!-- App 4: Contact -->
+        <div class="app-icon" id="photoIcon">
+            <svg viewBox="0 0 24 24" class="icon-svg red-icon"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l-8 5-8-5v2z"/></svg>
+            <p>Contact</p>
+        </div>
+
+    </div>
+
+    <!-- ================= APPLICATION WINDOWS ================= -->
+
+    <!-- 1. Window: Welcome (Zdna Welcome World o l-ktiba kamla) -->
+    <div class="window" id="welcome" style="top: 120px; left: 160px; display: none;">
+        <div class="windowheader" id="welcomeheader">
+            <span class="headertext">Welcome.exe</span>
+            <div class="closebutton" id="welcomeclose">✕</div>
+        </div>
+        <div class="window-content">
+            <h1 style="margin-top: 0; color: #d31027;">Welcome World! 🌍</h1>
+            <h2>Welcome to my Personal OS</h2>
+            <p>Hello hacker! This is my fully customized web workspace built during subsequent Jams. You have complete freedom here.</p>
+            <p><strong>Age:</strong> 14 years old</p>
+            <p>I am a young developer who loves building websites, crafting platforms, and tweaking hardware components!</p>
+        </div>
+    </div>
+
+    <!-- 2. Window: Projects -->
+    <div class="window" id="projects" style="top: 160px; left: 220px; display: none;">
+        <div class="windowheader" id="projectsheader">
+            <span class="headertext">My_Projects.app</span>
+            <div class="closebutton" id="projectsclose">✕</div>
+        </div>
+        <div class="window-content">
+            <h3 style="margin-top: 0; color: #d31027;">📁 My Custom Tech & Web Creations:</h3>
+            
+            <div class="project-list">
+                <div class="project-item">
+                    <h5>🔴 Wydad AC Custom Website</h5>
+                    <p>A dedicated fan web platform designed with custom theme panels to showcase stats, layouts, and news for WAC.</p>
+                </div>
+                <div class="project-item">
+                    <h5>🏠 Smart Home Automation</h5>
+                    <p>Building logic interfaces and systems to control and monitor house functions through clean automation code.</p>
+                </div>
+                <div class="project-item">
+                    <h5>👏 Smart Clap RGB Controller</h5>
+                    <p>Integrating hardware with responsive programming to control dynamic RGB lighting setups using clap commands.</p>
+                </div>
+                <div class="project-item">
+                    <h5>⚡ Reaction Game</h5>
+                    <p>An interactive browser game custom coded to test hardware pointer speeds and player feedback mechanics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Window: DevNotes -->
+    <div class="window" id="notes" style="top: 220px; left: 320px; display: none;">
+        <div class="windowheader" id="notesheader">
+            <span class="headertext">DevNotes.app</span>
+            <div class="closebutton" id="notesclose">✕</div>
+        </div>
+        <div class="window-content">
+            <h4 style="margin: 0 0 10px 0; color: #333;">📝 Code Scratchpad & Ideas:</h4>
+            <textarea id="noteInput" placeholder="Type your next web project ideas here..."></textarea>
+            <button class="save-btn" onclick="sauvegarderNote()">Save to System</button>
+        </div>
+    </div>
+
+    <!-- 4. Window: Contact -->
+    <div class="window" id="photo" style="top: 280px; left: 440px; display: none;">
+        <div class="windowheader" id="photoheader">
+            <span class="headertext">Life.png</span>
+            <div class="closebutton" id="photoclose">✕</div>
+        </div>
+        <div class="window-content">
+            <h4 style="margin: 0 0 15px 0; color: #111; text-align: center;">My Passions & Contact 🤝</h4>
+            <ul style="padding-left: 20px; line-height: 1.6; margin-bottom: 20px;">
+                <li>⚽ <strong>Football:</strong> Huge fan of WAC (Wydad) & Equipe du Maroc!</li>
+                <li>🛠️ <strong>Hardware:</strong> Computer components and tech architecture.</li>
+                <li>🎮 <strong>Mobile Gaming:</strong> Crushing games on my phone.</li>
+            </ul>
+            <div class="contact-card">
+                <p style="font-size: 15px; margin: 5px 0;">📸 <strong>Instagram:</strong> <a href="https://instagram.com" target="_blank" style="color: #d31027; text-decoration: none; font-weight: bold;">@_imrane_rm</a></p>
+                <p style="font-size: 14px; margin: 5px 0;">✉️ <strong>Gmail:</strong> <a href="mailto:imranerah512@gmail.com" style="color: #111; font-weight: bold; text-decoration: none;">imranerah512@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
